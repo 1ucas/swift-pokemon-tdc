@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Swift Pokemon Module' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'SwiftLint'
+
+  # Pods for Swift Pokemon Module
+
+  target 'Swift Pokemon ModuleTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'Swift Pokemon Sample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Swift Pokemon Sample
+
+  target 'Swift Pokemon SampleUITests' do
+    # Pods for testing
+  end
+
+end

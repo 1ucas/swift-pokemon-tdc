@@ -1,0 +1,71 @@
+default_platform :ios
+
+platform :ios do
+
+  desc "Pipeline Process"
+  lane :develop do
+    buildApp
+    unitTest
+    coverageLint
+    sonar
+  end
+
+  def installDeps
+    system("bundle install")
+  end
+
+  def buildApp
+    gym(
+      configuration: "Debug",
+      scheme: "Swift Pokemon Sample",
+      clean: true,
+      output_name: "PokemonSwiftSample",
+      export_method: "developer-id",
+      skip_codesigning: true,
+      skip_package_ipa: true,
+      destination: "generic/platform=iOS Simulator,name=iPhone 8 Plus,OS=13.7",
+      derived_data_path: "./DerivedData",
+      include_bitcode: false
+    )
+  end
+
+  def unitTest
+    scan(
+        scheme: "Swift Pokemon Module",
+        derived_data_path: "./DerivedData",
+        output_directory: "./reports",
+        code_coverage: true,
+        device: "iPhone 8",
+        result_bundle: true,
+        fail_build: true,
+        clean: false
+      )
+  end
+
+  def coverageLint 
+    slather(cobertura_xml: true, jenkins: true, scheme: "Swift Pokemon Module", build_directory: "./DerivedData", output_directory: "./reports", proj: "Swift Pokemon Module.xcodeproj")
+    swiftlint(output_file: "./reports/swiftlint.txt", ignore_exit_status: true)
+  end
+
+  def qualityAnalysis
+    puts "Coverage report for sonar..."
+    Dir.chdir("..") do
+      system("xcparse codecov 'reports/Swift Pokemon Module.test_result.xcresult' reports/coverage/")
+      system("./xccov-to-sonarqube-generic.sh reports/coverage/action.xccovarchive > sonarqube-generic-coverage.xml")
+    end
+
+    puts "Sonar..."
+    version = get_version_number(xcodeproj: "Swift Pokemon Module.xcodeproj", target: "Swift Pokemon Module")
+    sonarPath = File.expand_path("../sonar-project.properties", Dir.pwd)
+
+    system("sed -i -e \"s/#PROJECT_VERSION#/#{version}/g\" sonar-project.properties")
+
+    sonar(
+      project_configuration_path: sonarPath,
+      project_version: version,
+      branch_name: 'master',
+      sonar_runner_args: "-Dsonar.verbose=true -Dsonar.coverageReportPaths=sonarqube-generic-coverage.xml"
+    )   
+  end
+
+end

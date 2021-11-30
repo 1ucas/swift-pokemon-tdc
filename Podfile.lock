@@ -1,0 +1,21 @@
+PODS:
+  - SwiftPokemonModule (0.0.2)
+  - SwiftTCGModule (0.0.2)
+
+DEPENDENCIES:
+  - SwiftPokemonModule (from `Swift-Pokemon-Module`)
+  - SwiftTCGModule (from `Swift-TCG-Module`)
+
+EXTERNAL SOURCES:
+  SwiftPokemonModule:
+    :path: Swift-Pokemon-Module
+  SwiftTCGModule:
+    :path: Swift-TCG-Module
+
+SPEC CHECKSUMS:
+  SwiftPokemonModule: c806fb8d822a3368f1a4c548886d10292867a6e1
+  SwiftTCGModule: 62a0adc630f6dd0dc2d97107815cc7459c5f04df
+
+PODFILE CHECKSUM: 7b4340d541dd16459d907909d62841d345bad90e
+
+COCOAPODS: 1.10.2

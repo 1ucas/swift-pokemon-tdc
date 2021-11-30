@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E1u-pu-qGB">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="pokemon_hollow.ttf">
+            <string>PokemonHollowNormal</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Choose Path-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Choose Path" id="BYZ-38-t0r" customClass="ChoosePathViewController" customModule="Swift_Pokemon_TCG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha seu caminho" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZr-Wa-JhG">
+                                <rect key="frame" x="59" y="94" width="257.5" height="36.5"/>
+                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="26"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HcB-g8-aea">
+                                <rect key="frame" x="120" y="420.5" width="135" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h37-H9-nTA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <state key="normal" title="SWIFT TCG">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPokemonTCG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPX-Uq-T4R"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokemon_choose" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-NJ-sdJ">
+                                <rect key="frame" x="112.5" y="170.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ulj-ln-Vhh"/>
+                                    <constraint firstAttribute="height" constant="150" id="vU0-d7-Idg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-FY-tEY">
+                                <rect key="frame" x="120" y="490.5" width="135" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d7T-tl-7VD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <state key="normal" title="SWIFT POKEMON">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPokemonFeature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9h-YN-adZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xIo-Uo-jlc">
+                                <rect key="frame" x="120" y="350.5" width="135" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="GdX-9s-dfF"/>
+                                    <constraint firstAttribute="height" constant="40" id="i9g-pm-WzV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <state key="normal" title="SWIFT TCG ASYNC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAsyncPokemonTCG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeW-ro-8Ro"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CAr-FY-tEY" secondAttribute="trailing" constant="120" id="36c-Rx-lMf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HcB-g8-aea" secondAttribute="trailing" constant="120" id="6f1-sG-2yU"/>
+                            <constraint firstItem="8Lt-NJ-sdJ" firstAttribute="top" secondItem="CZr-Wa-JhG" secondAttribute="bottom" constant="40" id="8JK-IP-zHt"/>
+                            <constraint firstItem="xIo-Uo-jlc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="HUW-0f-1fD"/>
+                            <constraint firstItem="xIo-Uo-jlc" firstAttribute="top" secondItem="8Lt-NJ-sdJ" secondAttribute="bottom" constant="30" id="QEM-7r-fWs"/>
+                            <constraint firstItem="CAr-FY-tEY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Uqg-MG-PIX"/>
+                            <constraint firstItem="HcB-g8-aea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="XbE-88-4at"/>
+                            <constraint firstItem="HcB-g8-aea" firstAttribute="top" secondItem="xIo-Uo-jlc" secondAttribute="bottom" constant="30" id="YRa-uJ-fZi"/>
+                            <constraint firstItem="8Lt-NJ-sdJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c0h-cf-ZaG"/>
+                            <constraint firstItem="CZr-Wa-JhG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fom-ue-eO2"/>
+                            <constraint firstItem="CAr-FY-tEY" firstAttribute="top" secondItem="HcB-g8-aea" secondAttribute="bottom" constant="30" id="pXm-xZ-Rfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xIo-Uo-jlc" secondAttribute="trailing" constant="120" id="waE-1n-drB"/>
+                            <constraint firstItem="CZr-Wa-JhG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="zJE-ah-Dp3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3jj-oc-9pd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="93.103448275862078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZIp-MT-KBA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1u-pu-qGB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="44m-aK-lXA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t2U-fl-KMJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B14-HD-vL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pokemon_choose" width="126" height="117.5"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

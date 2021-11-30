@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C14E7F2B26D80FE000F9C27C /* PokemonTCGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14E7F2A26D80FE000F9C27C /* PokemonTCGViewModel.swift */; };
+		C17C63BD26D81EB200DC1750 /* PokemonTCGSwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C63BC26D81EB200DC1750 /* PokemonTCGSwiftView.swift */; };
+		C17C63C126D83D1B00DC1750 /* PokemonTCGDeclarativeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C63C026D83D1B00DC1750 /* PokemonTCGDeclarativeViewModel.swift */; };
+		C1877AB526D5962000DE2EC4 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1877AB426D5962000DE2EC4 /* UIImageExtension.swift */; };
+		C19DCAB926D2E2110008CFA2 /* Swift_TCG_Module.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19DCAAF26D2E2110008CFA2 /* Swift_TCG_Module.framework */; };
+		C19DCABE26D2E2110008CFA2 /* Swift_TCG_ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DCABD26D2E2110008CFA2 /* Swift_TCG_ModuleTests.swift */; };
+		C19DCAC026D2E2110008CFA2 /* Swift_TCG_Module.h in Headers */ = {isa = PBXBuildFile; fileRef = C19DCAB226D2E2110008CFA2 /* Swift_TCG_Module.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C19DCACC26D2E4BC0008CFA2 /* PokemonTCGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DCACB26D2E4BC0008CFA2 /* PokemonTCGViewController.swift */; };
+		C19DCACE26D2E4DD0008CFA2 /* PokemonTCGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DCACD26D2E4DD0008CFA2 /* PokemonTCGView.swift */; };
+		C19DCAD126D2ED4E0008CFA2 /* PokemonTCGService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DCAD026D2ED4E0008CFA2 /* PokemonTCGService.swift */; };
+		C19DCAD326D2EE1F0008CFA2 /* PokemonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DCAD226D2EE1F0008CFA2 /* PokemonCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C19DCABA26D2E2110008CFA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19DCAA626D2E2110008CFA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C19DCAAE26D2E2110008CFA2;
+			remoteInfo = "Swift TCG Module";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C14E7F2A26D80FE000F9C27C /* PokemonTCGViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGViewModel.swift; sourceTree = "<group>"; };
+		C17C63BC26D81EB200DC1750 /* PokemonTCGSwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGSwiftView.swift; sourceTree = "<group>"; };
+		C17C63C026D83D1B00DC1750 /* PokemonTCGDeclarativeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGDeclarativeViewModel.swift; sourceTree = "<group>"; };
+		C1877AB426D5962000DE2EC4 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		C19DCAAF26D2E2110008CFA2 /* Swift_TCG_Module.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swift_TCG_Module.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19DCAB226D2E2110008CFA2 /* Swift_TCG_Module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swift_TCG_Module.h; sourceTree = "<group>"; };
+		C19DCAB326D2E2110008CFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19DCAB826D2E2110008CFA2 /* Swift TCG ModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift TCG ModuleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19DCABD26D2E2110008CFA2 /* Swift_TCG_ModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_TCG_ModuleTests.swift; sourceTree = "<group>"; };
+		C19DCABF26D2E2110008CFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19DCACB26D2E4BC0008CFA2 /* PokemonTCGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGViewController.swift; sourceTree = "<group>"; };
+		C19DCACD26D2E4DD0008CFA2 /* PokemonTCGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGView.swift; sourceTree = "<group>"; };
+		C19DCAD026D2ED4E0008CFA2 /* PokemonTCGService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGService.swift; sourceTree = "<group>"; };
+		C19DCAD226D2EE1F0008CFA2 /* PokemonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C19DCAAC26D2E2110008CFA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19DCAB526D2E2110008CFA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19DCAB926D2E2110008CFA2 /* Swift_TCG_Module.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C14E7F2C26D818BD00F9C27C /* Declarative */ = {
+			isa = PBXGroup;
+			children = (
+				C17C63BC26D81EB200DC1750 /* PokemonTCGSwiftView.swift */,
+				C17C63C026D83D1B00DC1750 /* PokemonTCGDeclarativeViewModel.swift */,
+			);
+			path = Declarative;
+			sourceTree = "<group>";
+		};
+		C19DCAA526D2E2110008CFA2 = {
+			isa = PBXGroup;
+			children = (
+				C19DCAB126D2E2110008CFA2 /* Swift TCG Module */,
+				C19DCABC26D2E2110008CFA2 /* Swift TCG ModuleTests */,
+				C19DCAB026D2E2110008CFA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C19DCAB026D2E2110008CFA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C19DCAAF26D2E2110008CFA2 /* Swift_TCG_Module.framework */,
+				C19DCAB826D2E2110008CFA2 /* Swift TCG ModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C19DCAB126D2E2110008CFA2 /* Swift TCG Module */ = {
+			isa = PBXGroup;
+			children = (
+				C19DCACF26D2ED3A0008CFA2 /* Common */,
+				C19DCAC926D2E4790008CFA2 /* Legacy */,
+				C14E7F2C26D818BD00F9C27C /* Declarative */,
+				C19DCAB226D2E2110008CFA2 /* Swift_TCG_Module.h */,
+				C19DCAB326D2E2110008CFA2 /* Info.plist */,
+			);
+			path = "Swift TCG Module";
+			sourceTree = "<group>";
+		};
+		C19DCABC26D2E2110008CFA2 /* Swift TCG ModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C19DCABD26D2E2110008CFA2 /* Swift_TCG_ModuleTests.swift */,
+				C19DCABF26D2E2110008CFA2 /* Info.plist */,
+			);
+			path = "Swift TCG ModuleTests";
+			sourceTree = "<group>";
+		};
+		C19DCAC926D2E4790008CFA2 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				C1877AB426D5962000DE2EC4 /* UIImageExtension.swift */,
+				C19DCACD26D2E4DD0008CFA2 /* PokemonTCGView.swift */,
+				C19DCACB26D2E4BC0008CFA2 /* PokemonTCGViewController.swift */,
+				C14E7F2A26D80FE000F9C27C /* PokemonTCGViewModel.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		C19DCACF26D2ED3A0008CFA2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C19DCAD026D2ED4E0008CFA2 /* PokemonTCGService.swift */,
+				C19DCAD226D2EE1F0008CFA2 /* PokemonCard.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C19DCAAA26D2E2110008CFA2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19DCAC026D2E2110008CFA2 /* Swift_TCG_Module.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C19DCAAE26D2E2110008CFA2 /* Swift TCG Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19DCAC326D2E2110008CFA2 /* Build configuration list for PBXNativeTarget "Swift TCG Module" */;
+			buildPhases = (
+				C19DCAAA26D2E2110008CFA2 /* Headers */,
+				C19DCAAB26D2E2110008CFA2 /* Sources */,
+				C19DCAAC26D2E2110008CFA2 /* Frameworks */,
+				C19DCAAD26D2E2110008CFA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swift TCG Module";
+			productName = "Swift TCG Module";
+			productReference = C19DCAAF26D2E2110008CFA2 /* Swift_TCG_Module.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C19DCAB726D2E2110008CFA2 /* Swift TCG ModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19DCAC626D2E2110008CFA2 /* Build configuration list for PBXNativeTarget "Swift TCG ModuleTests" */;
+			buildPhases = (
+				C19DCAB426D2E2110008CFA2 /* Sources */,
+				C19DCAB526D2E2110008CFA2 /* Frameworks */,
+				C19DCAB626D2E2110008CFA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C19DCABB26D2E2110008CFA2 /* PBXTargetDependency */,
+			);
+			name = "Swift TCG ModuleTests";
+			productName = "Swift TCG ModuleTests";
+			productReference = C19DCAB826D2E2110008CFA2 /* Swift TCG ModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C19DCAA626D2E2110008CFA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C19DCAAE26D2E2110008CFA2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+					C19DCAB726D2E2110008CFA2 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = C19DCAA926D2E2110008CFA2 /* Build configuration list for PBXProject "Swift TCG Module" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C19DCAA526D2E2110008CFA2;
+			productRefGroup = C19DCAB026D2E2110008CFA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C19DCAAE26D2E2110008CFA2 /* Swift TCG Module */,
+				C19DCAB726D2E2110008CFA2 /* Swift TCG ModuleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C19DCAAD26D2E2110008CFA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19DCAB626D2E2110008CFA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C19DCAAB26D2E2110008CFA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19DCAD126D2ED4E0008CFA2 /* PokemonTCGService.swift in Sources */,
+				C19DCACC26D2E4BC0008CFA2 /* PokemonTCGViewController.swift in Sources */,
+				C19DCACE26D2E4DD0008CFA2 /* PokemonTCGView.swift in Sources */,
+				C1877AB526D5962000DE2EC4 /* UIImageExtension.swift in Sources */,
+				C19DCAD326D2EE1F0008CFA2 /* PokemonCard.swift in Sources */,
+				C17C63BD26D81EB200DC1750 /* PokemonTCGSwiftView.swift in Sources */,
+				C14E7F2B26D80FE000F9C27C /* PokemonTCGViewModel.swift in Sources */,
+				C17C63C126D83D1B00DC1750 /* PokemonTCGDeclarativeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19DCAB426D2E2110008CFA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19DCABE26D2E2110008CFA2 /* Swift_TCG_ModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C19DCABB26D2E2110008CFA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C19DCAAE26D2E2110008CFA2 /* Swift TCG Module */;
+			targetProxy = C19DCABA26D2E2110008CFA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C19DCAC126D2E2110008CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C19DCAC226D2E2110008CFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C19DCAC426D2E2110008CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XCKQJC262X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Swift TCG Module/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.manobray.Swift-TCG-Module";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C19DCAC526D2E2110008CFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XCKQJC262X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Swift TCG Module/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.manobray.Swift-TCG-Module";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C19DCAC726D2E2110008CFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XCKQJC262X;
+				INFOPLIST_FILE = "Swift TCG ModuleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.manobray.Swift-TCG-ModuleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C19DCAC826D2E2110008CFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XCKQJC262X;
+				INFOPLIST_FILE = "Swift TCG ModuleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.manobray.Swift-TCG-ModuleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C19DCAA926D2E2110008CFA2 /* Build configuration list for PBXProject "Swift TCG Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19DCAC126D2E2110008CFA2 /* Debug */,
+				C19DCAC226D2E2110008CFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C19DCAC326D2E2110008CFA2 /* Build configuration list for PBXNativeTarget "Swift TCG Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19DCAC426D2E2110008CFA2 /* Debug */,
+				C19DCAC526D2E2110008CFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C19DCAC626D2E2110008CFA2 /* Build configuration list for PBXNativeTarget "Swift TCG ModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19DCAC726D2E2110008CFA2 /* Debug */,
+				C19DCAC826D2E2110008CFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C19DCAA626D2E2110008CFA2 /* Project object */;
+}
