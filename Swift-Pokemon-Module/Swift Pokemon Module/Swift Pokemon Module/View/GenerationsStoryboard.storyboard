@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u0d-FI-y67">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generations-->
+        <scene sceneID="ngT-iV-bhq">
+            <objects>
+                <viewController storyboardIdentifier="GenerationsViewController" title="Generations" id="u0d-FI-y67" customClass="GenerationsViewController" customModule="SwiftPokemonModule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udP-xA-Zy8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI5-fy-zsf" userLabel="lblPokemonName">
+                                <rect key="frame" x="140" y="70" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMN-DK-3ax" userLabel="imgPokemon">
+                                <rect key="frame" x="112.5" y="161" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="dQJ-72-pBd"/>
+                                    <constraint firstAttribute="width" constant="150" id="iD6-3Z-sNf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoQ-7a-xSO" userLabel="btnRandomize">
+                                <rect key="frame" x="137.5" y="361" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="K0k-pp-nzD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Randomize"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iAs-Vm-p1R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YoQ-7a-xSO" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="5Mr-75-ClJ"/>
+                            <constraint firstItem="FMN-DK-3ax" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="6KX-Y1-s4x"/>
+                            <constraint firstItem="lI5-fy-zsf" firstAttribute="top" secondItem="iAs-Vm-p1R" secondAttribute="top" constant="70" id="OE3-IZ-opn"/>
+                            <constraint firstItem="lI5-fy-zsf" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="k9H-WH-tte"/>
+                            <constraint firstItem="FMN-DK-3ax" firstAttribute="top" secondItem="lI5-fy-zsf" secondAttribute="bottom" constant="70" id="m6Q-GI-B1H"/>
+                            <constraint firstItem="YoQ-7a-xSO" firstAttribute="top" secondItem="FMN-DK-3ax" secondAttribute="bottom" constant="50" id="xYw-Jy-E5C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNewPokemon" destination="YoQ-7a-xSO" id="rBL-RC-voB"/>
+                        <outlet property="imgPokemon" destination="FMN-DK-3ax" id="bc2-sq-cDr"/>
+                        <outlet property="lblGenerations" destination="lI5-fy-zsf" id="MhN-Vf-W5h"/>
+                        <outlet property="lblPokemonName" destination="lI5-fy-zsf" id="4N5-ok-bHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMf-zW-qc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="150.67466266866569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

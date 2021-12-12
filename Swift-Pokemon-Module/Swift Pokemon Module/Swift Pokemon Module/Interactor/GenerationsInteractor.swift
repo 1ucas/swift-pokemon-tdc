@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GenerationsUseCase {
+class GenerationsInteractor {
     
     func execute() -> String {
         return "Generation 1"

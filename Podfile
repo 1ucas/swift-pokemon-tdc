@@ -20,4 +20,4 @@ target 'Swift Pokemon TCG' do
 
 end
 
-# Link do Repo: https://github.com/1ucas/Swift-Pokemon-TCG/
+# Link do Repo: https://github.com/1ucas/Swift-Pokemon-TDC/
