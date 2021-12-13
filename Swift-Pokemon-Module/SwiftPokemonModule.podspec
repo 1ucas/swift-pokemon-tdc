@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "http://EXAMPLE/SwiftPokemonModule"
   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   spec.author       = { "Manobray" => "lucasramos.m@gmail.com" }
-  spec.platforms    = { :ios => "11.0" }
+  spec.platforms    = { :ios => "13.0" }
   spec.source       = { :git => "file:///./" }
 
   spec.pod_target_xcconfig = { 'RUN_DOCUMENTATION_COMPILER' => 'YES' }

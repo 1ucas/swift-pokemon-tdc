@@ -7,28 +7,72 @@
 //
 
 import UIKit
+import Combine
 
 public class GenerationsViewController: UIViewController, Storyboarded {
         
-    private var presenter: GenerationsPresenter?
+    var presenter: GenerationsPresenter?
+    private var cancellable: AnyCancellable?
 
     @IBOutlet weak var lblPokemonName: UILabel!
     @IBOutlet weak var imgPokemon: UIImageView!
-    @IBOutlet weak var btnNewPokemon: UIButton!
+    @IBOutlet weak var actIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var lblError: UILabel!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let interactor = GenerationsInteractor()
-        presenter = GenerationsPresenter(interactor: interactor, eventProxy: GenerationsEventProxy())
-        
-        let generations = presenter?.listGenerations()
-        
-        if let gens = generations {
-            lblPokemonName.text = gens.first
+        cancellable = presenter?.$state.sink { [weak self] state in
+            self?.handleState(state)
         }
         
-        presenter?.eventProxy.notify(eventPayload: .error("Hello"))
+        Task { await presenter?.viewDidLoad() }
+    }
+    
+    
+    @IBAction func didClickedRandomize(_ sender: Any) {
+        showLoading()
+        Task { await presenter?.loadNextPokemon() }
+    }
+    
+    private func handleState(_ state: GenerationsState) {
+        switch state {
+            case .loading:
+            self.showLoading()
+            case .error:
+            self.showError()
+            case .idle(let viewModel):
+            self.updatePokemon(viewModel)
+        }
+    }
+    
+    private func showLoading() {
+        hideError()
+        actIndicator.startAnimating()
+        actIndicator.isHidden = false
+    }
+    
+    private func hideLoading() {
+        actIndicator.stopAnimating()
+        actIndicator.isHidden = true
+    }
+    
+    private func showError() {
+        hideLoading()
+        lblError.isHidden = false
+    }
+    
+    private func hideError() {
+        lblError.isHidden = true
+    }
+    
+    private func updatePokemon(_ viewModel: PokemonViewModel) {
+        hideLoading()
+        hideError()
+        lblPokemonName.text = viewModel.title
+        UIImage.loadFrom(url: viewModel.imageUrl) { image in
+            self.imgPokemon.image = image
+        }
     }
 
 }

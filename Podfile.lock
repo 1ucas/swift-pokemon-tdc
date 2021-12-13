@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: Swift-TCG-Module
 
 SPEC CHECKSUMS:
-  SwiftPokemonModule: c806fb8d822a3368f1a4c548886d10292867a6e1
+  SwiftPokemonModule: 4fc825f2466d9c1edc51f9e5c7be6214678e2dca
   SwiftTCGModule: 62a0adc630f6dd0dc2d97107815cc7459c5f04df
 
 PODFILE CHECKSUM: 0d32d6d0d0a9be3198c5a5a0470c0fd47aa7e94f

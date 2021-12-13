@@ -15,13 +15,11 @@ class ChoosePathViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func startPokemonFeature(_ sender: Any) {
         
-        let vc = GenerationsViewController.instantiate()
-        
+        let vc = GenerationsWireframe.createGenerationsViperModule()
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

@@ -30,30 +30,50 @@
                                     <constraint firstAttribute="width" constant="150" id="iD6-3Z-sNf"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoQ-7a-xSO" userLabel="btnRandomize">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoQ-7a-xSO" userLabel="btnNext">
                                 <rect key="frame" x="137.5" y="361" width="100" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="K0k-pp-nzD"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Randomize"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="didClickedRandomize:" destination="u0d-FI-y67" eventType="touchUpInside" id="h0H-mF-zvC"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Lc1-UG-eTg">
+                                <rect key="frame" x="257.5" y="361.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AUw-Mm-Niw"/>
+                                    <constraint firstAttribute="width" constant="30" id="wh1-JX-3ea"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error occurred" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21s-K7-751">
+                                <rect key="frame" x="114.5" y="442" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iAs-Vm-p1R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YoQ-7a-xSO" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="5Mr-75-ClJ"/>
                             <constraint firstItem="FMN-DK-3ax" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="6KX-Y1-s4x"/>
+                            <constraint firstItem="Lc1-UG-eTg" firstAttribute="leading" secondItem="YoQ-7a-xSO" secondAttribute="trailing" constant="20" id="Hbg-N6-4eW"/>
                             <constraint firstItem="lI5-fy-zsf" firstAttribute="top" secondItem="iAs-Vm-p1R" secondAttribute="top" constant="70" id="OE3-IZ-opn"/>
+                            <constraint firstItem="Lc1-UG-eTg" firstAttribute="centerY" secondItem="YoQ-7a-xSO" secondAttribute="centerY" id="Vkp-jj-rub"/>
+                            <constraint firstItem="21s-K7-751" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="dTZ-Eh-F1h"/>
                             <constraint firstItem="lI5-fy-zsf" firstAttribute="centerX" secondItem="udP-xA-Zy8" secondAttribute="centerX" id="k9H-WH-tte"/>
                             <constraint firstItem="FMN-DK-3ax" firstAttribute="top" secondItem="lI5-fy-zsf" secondAttribute="bottom" constant="70" id="m6Q-GI-B1H"/>
+                            <constraint firstItem="21s-K7-751" firstAttribute="top" secondItem="YoQ-7a-xSO" secondAttribute="bottom" constant="50" id="qLf-98-ynU"/>
                             <constraint firstItem="YoQ-7a-xSO" firstAttribute="top" secondItem="FMN-DK-3ax" secondAttribute="bottom" constant="50" id="xYw-Jy-E5C"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnNewPokemon" destination="YoQ-7a-xSO" id="rBL-RC-voB"/>
+                        <outlet property="actIndicator" destination="Lc1-UG-eTg" id="Arx-uo-mf9"/>
                         <outlet property="imgPokemon" destination="FMN-DK-3ax" id="bc2-sq-cDr"/>
-                        <outlet property="lblGenerations" destination="lI5-fy-zsf" id="MhN-Vf-W5h"/>
+                        <outlet property="lblError" destination="21s-K7-751" id="7zN-fH-5Vy"/>
                         <outlet property="lblPokemonName" destination="lI5-fy-zsf" id="4N5-ok-bHc"/>
                     </connections>
                 </viewController>
@@ -65,6 +85,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
